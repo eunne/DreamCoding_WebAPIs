@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window size</title>
+  <style>
+    /* make tag class */
+    .tag {
+      display: inline-block;
+      padding: 15px;
+      margin: 20px;
+      background-color: yellow;
+      font-size: 25px;
+    }
+  </style>
+</head>
+<body>
+  <!-- div: for making website layout -->
+  <div class="tag">Window Size</div>
+</body>
+<script>
+  // 1.input class tag of DOM div in const tag
+  const tag = document.querySelector('.tag')
+
+  // for resizing and print out
+  // it can prevent write in duplicate.
+  function updateTag() {
+    tag.innerHTML = `
+
+    // screen size
+    Window.screen: ${window.screen.width} ${window.screen.height} </br>
+
+    // browser size (include head)
+    Window.outer: ${window.outerWidth} ${window.outerHeight} </br>
+
+    // browser size (except head, include scroll)
+    Window.inner: ${window.innerWidth} ${window.innerHeight} </br>
+
+    // browser size (except scroll)
+    documentElement.clientWidth: ${document.documentElement.clientWidth} ${document.documentElement.clientHeight} </br>
+    `;
+  }
+
+  // for resizing
+  window.addEventListener('resize', () => {
+    updateTag();
+  })
+
+  // print out updatetag
+  updateTag();
+</script>
+</html>

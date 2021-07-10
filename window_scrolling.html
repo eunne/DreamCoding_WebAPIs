@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window scrolling</title>
+</head>
+<style>
+  body {
+    background-color: rgb(231, 214, 191);
+  }
+
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .special {
+    background-color: #4f4fe6
+  }
+
+/* id */
+  #scrollto {
+    position: fixed;
+    left: 150px;
+    top: 10px;
+  }
+
+  .scrollinto {
+  position: fixed;
+  left: 410px;
+  top: 10px;
+  } 
+
+  .scrollby {
+  position: fixed;
+  left: 280px;
+  top: 10px;
+  } 
+
+/*difference bt class and id
+class like var -> use several times
+id like const -> use only one time */
+
+</style>
+<body>
+  <button id = "scrollto">scroll to 1000px(y)</button>
+  <button class="scrollby" onclick = "scrollby(event)">scroll by 100px(y)</button>
+  <button class = "scrollinto">scroll into speical</button>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div class = "special"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+<script>
+
+
+// use attribute method
+  const scrollby = document.querySelector(".scrollby");
+
+  function scrollby(event) {
+    event.scrollBy(0, 1000);
+  }
+
+//use DOM property method
+  const scrollto = document.querySelector('#scrollto'); //bring Node attribute
+  scrollto.onclick = function() {
+    //window.scrollTo(0, 1000); //x = left, y = top //same as below
+    window.scrollTo({left:0, top:1000, behavior:"smooth"}) 
+  };
+
+
+
+  const scrollinto = document.querySelector(".scrollinto");
+  scrollinto.addEventListener('click', () => {
+    special.scrollIntoView(true) 
+    //true => move to top = 0, false => move to bottom = 0
+    //bind to the object directly
+  });
+  
+/* same as above, used addEventListener
+
+  const special = document.querySelector(".special").offsetTop;
+  const scrollinto = document.querySelector(".scrollinto");
+  scrollinto.addEventListener('click', () => {
+    scrollTo({top: special, behavior:"smooth"}) 
+  }); */
+
+</script>
+</html>

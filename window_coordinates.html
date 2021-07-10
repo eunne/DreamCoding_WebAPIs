@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client xy vs Page xy</title>
+</head>
+<style>
+  body {
+    background-color: black;
+    /* overflow: hidden; //사용자가 스크롤 못하게 방지 */
+  }
+
+  /* div {
+    아래 상자 내용
+    꼭 class사용 안하고 div 자체에 만들어도 상관없음 (현 문제에선)
+  } */
+  .box {
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+
+  .blue {
+    background-color: blue;
+  }
+  
+  /* 따라서 특별한 친구만 class를 주고 색상 넣으면 됨 */
+  .thistle {
+    background-color: thistle;
+  }
+  </style>
+<body>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+  <div class="box thistle"></div>
+  <div class="box blue"></div>
+  <div class="box blue"></div>
+</body>
+<script>
+  const $target = document.querySelector('.box.thistle')
+  
+  $target.addEventListener ('click', (event) => {
+    const rect = $target.getBoundingClientRect();
+    console.log(rect)
+    console.log(`client x, y : ${event.clientX} ${event.clientY}`);
+    console.log(`page x, y: ${event.pageX} ${event.pageY}`);
+    /* page x, y : ${window.pageXOffset} ${window.pageYOffset} */
+  });
+
+  
+  function inform() {
+    
+  }
+
+</script>
+</html>

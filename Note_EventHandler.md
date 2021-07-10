@@ -68,7 +68,7 @@ $button.addEventListener('click', () => {
 ## 이벤트 핸들러 제거
 
 ```jsx
-$butoon.removeEventListener('click', handleClick)
+$button.removeEventListener('click', handleClick)
 ```
 
 - 전달된 인수가 일치하지 않으면 이벤트 핸들러가 제거되지 않음

@@ -5,7 +5,7 @@
 
 <br/>
 
-This is my firsttime to write down HTML with JS code, 'cause I've practiced algorithm and data structure.
+This is my firsttime to write down HTML with JS code, 'cause I've practiced only algorithm and data structure.
 
 When I wrote down codes with JS, I thought 'What is it? it's.. a kind of different from what I studied?'<br/>
 That's becuase I didn't study on parts of Event, Promise, Ajax, Browser etc.. yet.

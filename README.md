@@ -21,8 +21,7 @@ Collecting new knowledge makes me thrilled, though.
 
 * webAPIs list : https://developer.mozilla.org/en-US/docs/Web/API
 
-* Event handler : https://www.notion.so/Event-handler-51c35e86edba46fd9e201161bdcff57e
-
+* Event handler : ./Note_Eventhandler.md 
 * Window/Brower size
 
    <img src="windowSize.png">

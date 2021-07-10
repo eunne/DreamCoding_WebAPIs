@@ -92,18 +92,20 @@ id like const -> use only one time */
 
   const scrollinto = document.querySelector(".scrollinto");
   scrollinto.addEventListener('click', () => {
-    special.scrollIntoView(true) 
+    special.scrollIntoView(true)
     //true => move to top = 0, false => move to bottom = 0
-    //bind to the object directly
+     //bind to the object directly (special)
   });
   
-/* same as above, used addEventListener
+ 
+  
 
+/* same as above, used addEventListener*/
   const special = document.querySelector(".special").offsetTop;
   const scrollinto = document.querySelector(".scrollinto");
   scrollinto.addEventListener('click', () => {
     scrollTo({top: special, behavior:"smooth"}) 
-  }); */
+  });
 
 </script>
 </html>

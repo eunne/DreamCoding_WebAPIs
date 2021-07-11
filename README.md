@@ -1,5 +1,4 @@
-# WebAPIs_CodeReview
-
+# WebAPIs CodeReview
 ## 실행화면
 
 <img src="./img/scrolling.gif" width="800px">
@@ -80,3 +79,4 @@ const scrollInto = document.querySelector(".scroll-into");
 
 ## 관련내용 정리
 👉 [이벤트 핸들러란?](Note_Eventhandler.md)
+

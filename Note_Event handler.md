@@ -1,14 +1,20 @@
 # 이벤트 핸들러 Event handler
 
+<br/>
+
 ## 이벤트 핸들러?
 
 이벤트가 발생했을 때 호출될 함수
 
 함수를 언제 호출할 지 알 수 없으므로 브라우저에게 함수 호출을 위임.
 
+<br/>
+
 ## 이벤트 핸들러 등록
 
 브라우저에게 이벤트 핸들러의 호출을 위임하는 것
+
+<br/>
 
 ### 어트리뷰트 방식
 
@@ -27,6 +33,8 @@
 
 즉, 문 자체가 'onclick' 이라는 함수몸체가 되는 것이다. (위에선  'scrollby(event)')
 
+<br/>
+
 ```jsx
 functtion onclick(event) {
   scrollby(event)
@@ -35,7 +43,11 @@ functtion onclick(event) {
 
 이벤트가 발생하면 위와 같이 onclick이라는 변수가 암묵적으로 생성되고, 그 안에 위에서 할당했던 scollby함수가 몸체를 이루게 된다.
 
-그런데 이 onclick이라는 함수는 event라는 이름을 매개변수로 갖기 때문에 이벤트 객체를 전달받기 위해선 이벤트 핸들러(scrollby)의 첫 매개변수 이름은 무조건 event여야한다.
+그런데 이 onclick이라는 함수는 event라는 이름을 매개변수로 갖기 때문에 이벤트 객체를 전달받기 위해선
+
+이벤트 핸들러(scrollby)의 첫 매개변수 이름은 무조건 event여야한다.
+
+<br/>
 
 ```jsx
 <button onclick = "scrollby(event)">scroll by 100px(y)</button>
@@ -43,7 +55,12 @@ functtion onclick(event) {
 
 HTML과 JS는 관심사가 다르니 한 곳에 담아두는 것은 별로 안 좋다. 그러니 위 방식은 사용하지 않는 것을 권장한다.
 
-하지만 CBD방식의 Angular/React/Svelte/Vue.js 같은 프레임워크/라이브러리는  HTML,CSS,JS은 전반적으로 봤을 때 뷰 구성요소라는 하나의 틀로 보기 때문에 위와같은 어트리뷰트 방식을 사용한다.
+하지만 CBD방식의 Angular/React/Svelte/Vue.js 같은 프레임워크/라이브러리는
+
+HTML,CSS,JS은 전반적으로 봤을 때 뷰 구성요소라는 하나의 틀로 보기 때문에 위와같은 어트리뷰트 방식을 사용한다.
+
+<br/>
+<br/>
 
 ### 프로퍼티 방식
 
@@ -59,13 +76,18 @@ HTML과 JS는 관심사가 다르니 한 곳에 담아두는 것은 별로 안 �
 </script>
 ```
 
-이벤트를 발생시킬 이벤트 타겟이나 전파된 이벤트를 캐치할 DOM에 이벤트 핸들러를 직접 바인딩 시킨다. 위에선 scrollTo 어트리뷰트를 불러와 onclick이라는 이벤트 핸들러에 직접 바인딩 시켰다.
+이벤트를 발생시킬 이벤트 타겟이나 전파된 이벤트를 캐치할 DOM에 이벤트 핸들러를 직접 바인딩 시킨다.
 
-![%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3%20%E1%84%92%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A5%20Event%20handler%200cb8503740c74461a44bbb4826b523bc/KakaoTalk_20210711_094901517.jpg](%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3%20%E1%84%92%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A5%20Event%20handler%200cb8503740c74461a44bbb4826b523bc/KakaoTalk_20210711_094901517.jpg)
+위에선 scrollTo 어트리뷰트를 불러와 onclick이라는 이벤트 핸들러에 직접 바인딩 시켰다.
 
-모던자바스크립트 Deep Dive
+<br/>
+
+<img src="property.jpg">
 
 이 방법의 단점이 있다면 이벤트 핸들러 프로퍼티에 하나의 이벤트 핸들러만 바인딩이 가능하다는 것.
+
+<br/>
+<br/>
 
 ### addEventListener 메서드 방식
 
@@ -85,11 +107,15 @@ DOM Level2에 도입된 방식이다. (위 두개는 Level 0)
 
 다른 방법과 다르게 접두사 on을 붙이지 않고, 이벤트 핸들러를 직접 바인딩 하는 것이 아닌 인수로 전달한다.
 
-![%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3%20%E1%84%92%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A5%20Event%20handler%200cb8503740c74461a44bbb4826b523bc/KakaoTalk_20210711_094900084.jpg](%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3%20%E1%84%92%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A5%20Event%20handler%200cb8503740c74461a44bbb4826b523bc/KakaoTalk_20210711_094900084.jpg)
+<img src="addEventListener.jpg">
 
-모던자바스크립트 Deep Dive
+
+<br/>
+<br/>
+<br/>
 
 ## 이벤트 핸들러 제거
+<br/>
 
 ### removeEventListener 메서드 방식
 
@@ -112,6 +138,8 @@ DOM Level2에 도입된 방식이다. (위 두개는 Level 0)
 
 물론, argument.callee로 제거할 수 있지만 코드최적화를 방해하므로 가급적 변수나 자료구조에 저장하여 제거하는 것을 추천한다.
 
+<br/>
+
 ### 프로퍼티 방식
 
 이벤트 핸들러 프로퍼티에 null을 할당하여 제거한다.
@@ -131,3 +159,5 @@ DOM Level2에 도입된 방식이다. (위 두개는 Level 0)
   scrollTo.onclick = null;
 </script>
 ```
+
+<br/>

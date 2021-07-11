@@ -102,7 +102,7 @@ DOM Level2에 도입된 방식이다. (위 두개는 Level 0)
 다른 방법과 다르게 접두사 on을 붙이지 않고, 이벤트 핸들러를 직접 바인딩 하는 것이 아닌 인수로 전달한다.
 
 <br/>
-<img src="addEventListener.jpg" width="800px">
+<img src="./img/addEventListener.jpg" width="800px">
 
 
 <br/>

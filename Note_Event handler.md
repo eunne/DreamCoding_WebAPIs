@@ -81,8 +81,8 @@ HTML,CSS,JS은 전반적으로 봤을 때 뷰 구성요소라는 하나의 틀�
 위에선 scrollTo 어트리뷰트를 불러와 onclick이라는 이벤트 핸들러에 직접 바인딩 시켰다.
 
 <br/>
+<img src="property.jpg" width="800px">
 
-<img src="property.jpg">
 
 이 방법의 단점이 있다면 이벤트 핸들러 프로퍼티에 하나의 이벤트 핸들러만 바인딩이 가능하다는 것.
 
@@ -107,7 +107,8 @@ DOM Level2에 도입된 방식이다. (위 두개는 Level 0)
 
 다른 방법과 다르게 접두사 on을 붙이지 않고, 이벤트 핸들러를 직접 바인딩 하는 것이 아닌 인수로 전달한다.
 
-<img src="addEventListener.jpg">
+<br/>
+<img src="addEventListener.jpg" width="800px">
 
 
 <br/>
@@ -142,8 +143,6 @@ DOM Level2에 도입된 방식이다. (위 두개는 Level 0)
 
 ### 프로퍼티 방식
 
-이벤트 핸들러 프로퍼티에 null을 할당하여 제거한다.
-
 ```jsx
 <script>
   const scrollTo = document.querySelector("#scroll-to");
@@ -160,4 +159,5 @@ DOM Level2에 도입된 방식이다. (위 두개는 Level 0)
 </script>
 ```
 
+이벤트 핸들러 프로퍼티에 null을 할당하여 제거한다.
 <br/>

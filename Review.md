@@ -23,6 +23,5 @@ Collecting new knowledge makes me thrilled, though.
 
 * Event handler : [Note for EventHandler](./README.md) 
 * Window/Brower size
-
-   <img src="windowSize.png">
+   <img src="./img/windowSize.png">
 

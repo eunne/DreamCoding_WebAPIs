@@ -75,7 +75,7 @@ HTML,CSS,JS은 전반적으로 봤을 때 뷰 구성요소라는 하나의 틀�
 위에선 scrollTo 어트리뷰트를 불러와 onclick이라는 이벤트 핸들러에 직접 바인딩 시켰다.
 
 <br/>
-<img src="property.jpg" width="800px">
+<img src="./img/property.jpg" width="800px">
 
 
 이 방법의 단점이 있다면 이벤트 핸들러 프로퍼티에 하나의 이벤트 핸들러만 바인딩이 가능하다는 것.

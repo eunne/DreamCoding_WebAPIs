@@ -21,7 +21,7 @@ Collecting new knowledge makes me thrilled, though.
 
 * webAPIs list : https://developer.mozilla.org/en-US/docs/Web/API
 
-* Event handler : [Note for EventHandler](./Note_EventHandler.md) 
+* Event handler : [Note for EventHandler](./README.md) 
 * Window/Brower size
 
    <img src="windowSize.png">

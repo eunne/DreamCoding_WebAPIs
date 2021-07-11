@@ -79,4 +79,4 @@ const scrollInto = document.querySelector(".scroll-into");
 <br/>
 
 ## 관련내용 정리
-👉 이벤트 핸들러란?
+👉 [이벤트 핸들러란?](Note_Eventhandelr.md)

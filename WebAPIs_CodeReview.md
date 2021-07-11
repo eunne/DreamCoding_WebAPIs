@@ -73,3 +73,10 @@ const scrollInto = document.querySelector(".scroll-into");
 👉🏽 DOM 프로퍼티에 할당 될 때는 카멜케이스로 바뀐다.
 
 😄 DOM 부분에서 읽었어서 선생님 코드 보면서 '아 이게 이건가?'라는 생각을 하게 됐다. 그래서 뭔가 그냥 혼자 뿌듯.ㅋㅋ
+
+
+<br/>
+<br/>
+
+## 관련내용 정리
+👉 이벤트 핸들러란?
